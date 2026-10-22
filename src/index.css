@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: #070a11;
+  color: #e2e8f0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Tactical Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090e18;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5500;
+}
+
+/* Tactical Background Grid Pattern */
+.bg-tactical-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(30, 41, 59, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 41, 59, 0.25) 1px, transparent 1px);
+}
+
+.bg-radar-grid {
+  background-size: 40px 40px;
+  background-image: 
+    radial-gradient(circle, rgba(6, 182, 212, 0.15) 1px, transparent 1px);
+}
+
+/* Tactical glowing border */
+.border-glow-fire {
+  border-color: rgba(255, 85, 0, 0.5);
+  box-shadow: 0 0 15px -3px rgba(255, 85, 0, 0.3);
+}
+
+.border-glow-cyan {
+  border-color: rgba(6, 182, 212, 0.5);
+  box-shadow: 0 0 15px -3px rgba(6, 182, 212, 0.3);
+}
+
+.border-glow-red {
+  border-color: rgba(239, 68, 68, 0.5);
+  box-shadow: 0 0 15px -3px rgba(239, 68, 68, 0.3);
+}
+
+/* CRT Scanline effect (subtle) */
+.scanline-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
